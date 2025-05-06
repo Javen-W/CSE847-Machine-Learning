@@ -11,7 +11,7 @@ This repository contains my coursework for CSE847: Machine Learning, a graduate-
 ## Homework 1: Bayesian Inference and Classification
 
 ### Overview
-The coursework for CSE847 covers  Homework 1 includes five problems:
+Homework 1 includes five problems:
 1. **Bayes Classifier**: Proving the bias of the MLE estimator for variance in a Gaussian distribution and deriving the MAP estimator for the mean.
 2. **Parameter Estimation**: Computing the MLE estimator for a Poisson distribution and its expectation.
 3. **Naïve Bayes Classifier**: Analyzing parameters and estimating probabilities for a categorical dataset of apples.
@@ -28,7 +28,7 @@ The coursework for CSE847 covers  Homework 1 includes five problems:
 
 ### Problem 3: Naïve Bayes Classifier
 - **Task**: Analyze a dataset of apples with features (size, color, shape) to determine the number of parameters, estimate their MLE values, and predict the class probability for a new apple.
-- **Solution**: Identified 14 independent parameters (class prior and conditional probabilities). Estimated probabilities via MLE (e.g., \(P(\text{Size=Small}|\text{Good=Yes})\)). Predicted \(P(\text{Good=No}|\text{Small, Red, Circle}) = 0.66\), leading to a "No" prediction.
+- **Solution**: Identified 14 independent parameters (class prior and conditional probabilities). Estimated probabilities via MLE (e.g., $P(\text{Size=Small}|\text{Good=Yes})$ ). Predicted $P(\text{Good=No}|\text{Small, Red, Circle}) = 0.66$, leading to a "No" prediction.
 
 ### Problem 4: Logistic Regression
 - **Task**: Train a logistic regression classifier on a synthetic dataset with two initial weight vectors and analyze convergence.
