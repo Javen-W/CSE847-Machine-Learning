@@ -23,8 +23,8 @@ The coursework for CSE847 covers  Homework 1 includes five problems:
 - **Solution**: Demonstrated that $\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2$, confirming bias. Derived $\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}$ using the posterior distribution.
 
 ### Problem 2: Parameter Estimation
-- **Task**: Find the MLE estimator for the parameter \(\lambda\) of a Poisson distribution and compute the expectation \(\mathbb{E}[X]\).
-- **Solution**: Derived \(\hat{\lambda}_{MLE} = \frac{1}{N}\sum k_i\) by maximizing the log-likelihood. Proved \(\mathbb{E}[X] = \lambda\) using the Poisson PMF.
+- **Task**: Find the MLE estimator for the parameter $\lambda$ of a Poisson distribution and compute the expectation $\mathbb{E}[X]$.
+- **Solution**: Derived $\hat{\lambda}_{MLE} = \frac{1}{N}\sum k_i$ by maximizing the log-likelihood. Proved $\mathbb{E}[X] = \lambda$ using the Poisson PMF.
 
 ### Problem 3: Naïve Bayes Classifier
 - **Task**: Analyze a dataset of apples with features (size, color, shape) to determine the number of parameters, estimate their MLE values, and predict the class probability for a new apple.
