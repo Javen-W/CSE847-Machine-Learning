@@ -19,8 +19,8 @@ The coursework for CSE847 covers  Homework 1 includes five problems:
 5. **Gaussian Naïve Bayes and Logistic Regression**: Comparing implementations on the banknote authentication dataset, including learning curves and generative modeling.
 
 ### Problem 1: Bayes Classifier
-- **Task**: Prove that the MLE estimator for variance $(\(\hat{\sigma}^2\))$ in a Gaussian distribution is biased and derive the MAP estimator for the mean $(\(\hat{\mu}_{MAP}\))$ given a Gaussian prior.
-- **Solution**: Demonstrated that $\(\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2\)$, confirming bias. Derived $\(\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}\)$ using the posterior distribution.
+- **Task**: Prove that the MLE estimator for variance $\hat{\sigma}^2$ in a Gaussian distribution is biased and derive the MAP estimator for the mean $\hat{\mu}_{MAP}$ given a Gaussian prior.
+- **Solution**: Demonstrated that $\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2$, confirming bias. Derived $\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}$ using the posterior distribution.
 
 ### Problem 2: Parameter Estimation
 - **Task**: Find the MLE estimator for the parameter \(\lambda\) of a Poisson distribution and compute the expectation \(\mathbb{E}[X]\).
