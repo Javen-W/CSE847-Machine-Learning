@@ -1,27 +1,26 @@
 # CSE847: Machine Learning Coursework
 
-This repository contains my coursework for CSE847: Machine Learning, a graduate-level course at Michigan State University. It includes three homework assignments (HW1–HW3) covering theoretical derivations and practical implementations of machine learning algorithms. The assignments focus on Bayesian inference, parameter estimation, Naïve Bayes classifiers, logistic regression, and model evaluation, with implementations applied to the banknote authentication dataset.
+This repository contains my coursework for CSE847: Machine Learning, a graduate-level course at Michigan State University. It includes three homework assignments (HW1–HW3) covering foundational machine learning concepts through theoretical proofs and practical implementations. The assignments focus on Bayesian inference, parameter estimation, Naïve Bayes classifiers, logistic regression, and model evaluation. The assignments combine mathematical derivations with Python implementations, emphasizing understanding of probabilistic models and optimization.
 
 ## Table of Contents
 - [CSE847: Machine Learning Coursework](#cse847-machine-learning-coursework)
-  - [Project Overview](#project-overview)
   - [Homework 1: Bayesian Inference and Classification](#homework-1-bayesian-inference-and-classification)
   - [Skills Demonstrated](#skills-demonstrated)
 
-## Project Overview
-The coursework for CSE847 covers foundational machine learning concepts through theoretical proofs and practical implementations. Homework 1 includes five problems:
+
+## Homework 1: Bayesian Inference and Classification
+
+### Overview
+The coursework for CSE847 covers  Homework 1 includes five problems:
 1. **Bayes Classifier**: Proving the bias of the MLE estimator for variance in a Gaussian distribution and deriving the MAP estimator for the mean.
 2. **Parameter Estimation**: Computing the MLE estimator for a Poisson distribution and its expectation.
 3. **Naïve Bayes Classifier**: Analyzing parameters and estimating probabilities for a categorical dataset of apples.
 4. **Logistic Regression**: Investigating the effect of initial weights on convergence in gradient ascent.
 5. **Gaussian Naïve Bayes and Logistic Regression**: Comparing implementations on the banknote authentication dataset, including learning curves and generative modeling.
 
-The assignments combine mathematical derivations with Python implementations, emphasizing understanding of probabilistic models and optimization.
-
-## Homework 1: Bayesian Inference and Classification
 ### Problem 1: Bayes Classifier
-- **Task**: Prove that the MLE estimator for variance (\(\hat{\sigma}^2\)) in a Gaussian distribution is biased and derive the MAP estimator for the mean (\(\hat{\mu}_{MAP}\)) given a Gaussian prior.
-- **Solution**: Demonstrated that \(\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2\), confirming bias. Derived \(\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}\) using the posterior distribution.
+- **Task**: Prove that the MLE estimator for variance $(\(\hat{\sigma}^2\))$ in a Gaussian distribution is biased and derive the MAP estimator for the mean $(\(\hat{\mu}_{MAP}\))$ given a Gaussian prior.
+- **Solution**: Demonstrated that $\(\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2\)$, confirming bias. Derived $\(\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}\)$ using the posterior distribution.
 
 ### Problem 2: Parameter Estimation
 - **Task**: Find the MLE estimator for the parameter \(\lambda\) of a Poisson distribution and compute the expectation \(\mathbb{E}[X]\).
