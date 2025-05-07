@@ -23,18 +23,22 @@ Homework 1 includes five problems:
 ### Problem 1: Bayes Classifier
 - **Task**: Prove that the MLE estimator for variance $\hat{\sigma}^2$ in a Gaussian distribution is biased and derive the MAP estimator for the mean $\hat{\mu}_{MAP}$ given a Gaussian prior.
 - **Solution**: Demonstrated that ...
+- **Results**: ...
 
 ### Problem 2: Parameter Estimation
 - **Task**: Find the MLE estimator for the parameter $\lambda$ of a Poisson distribution and compute the expectation $\mathbb{E}[X]$.
 - **Solution**: Derived ...
+- **Results**: ...
 
 ### Problem 3: Naïve Bayes Classifier
 - **Task**: Analyze a dataset of apples with features (size, color, shape) to determine the number of parameters, estimate their MLE values, and predict the class probability for a new apple.
 - **Solution**: Identified ...
+- **Results**: ...
 
 ### Problem 4: Logistic Regression
 - **Task**: Train a logistic regression classifier on a synthetic dataset with two initial weight vectors and analyze convergence.
 - **Solution**: Implemented gradient ascent ...
+- **Results**: ...
 
 ### Problem 5: Gaussian Naïve Bayes and Logistic Regression
 - **Task**: Implement Gaussian Naïve Bayes and logistic regression from scratch, evaluate on the banknote authentication dataset, plot learning curves, and analyze generative modeling.
@@ -42,6 +46,11 @@ Homework 1 includes five problems:
   - **Implementation**: Wrote Gaussian Naïve Bayes (assuming conditional independence) and logistic regression (gradient ascent) without using ML libraries. Used 3-fold cross-validation.
   - **Learning Curves**: Plotted accuracy vs. training set size ([0.01, 0.02, 0.05, 0.1, 0.625, 1.0]) over 5 runs. Logistic regression outperformed Naïve Bayes (e.g., 0.956 vs. 0.841 accuracy at full training size).
   - **Generative Modeling**: Generated 400 samples from Naïve Bayes (class \(y=1\)) and compared mean/variance with training data. Observed slight discrepancies in variance due to Gaussian assumptions not perfectly matching the dataset’s distribution.
+- **Results**:
+  - **Gaussian Naïve Bayes**: Mean accuracy 0.840, F1-score 0.814 (3-fold CV).
+  - **Logistic Regression**: Mean accuracy 0.953, F1-score 0.945 (3-fold CV).
+  - **Learning Curves**: Logistic regression consistently outperformed Naïve Bayes, with accuracy increasing with training size (e.g., 0.932 at 1% to 0.956 at 100% for LR).
+  - **Generative Modeling**: Generated samples had similar means but slightly lower variances compared to training data (e.g., variance for `variance` feature: 3.33–3.89 generated vs. 3.54 training).
 
 ### Tools and Technologies
 - **Python**: Core language for implementations.
@@ -49,17 +58,7 @@ Homework 1 includes five problems:
 - **Pandas**: Data manipulation and analysis.
 - **Matplotlib**: Plotting learning curves.
 - **ucimlrepo**: Fetching the banknote authentication dataset.
-- **scikit-learn**: Used only for `KFold` and `confusion_matrix` utilities, not for model implementations.
-
-### Results
-- **Problem 4 (Logistic Regression)**:
-  - Initial weights \([0, 0, 0, 0]\): Final weights \([0, 0.0166, 0.0166, 0.0166]\), log-likelihood \(-4.1098\).
-  - Initial weights \([0, 0, 1, 0]\): Final weights \([0, 0.0166, 1.0089, 0.0166]\), log-likelihood \(-3.3616\).
-- **Problem 5 (Model Comparison)**:
-  - **Gaussian Naïve Bayes**: Mean accuracy 0.840, F1-score 0.814 (3-fold CV).
-  - **Logistic Regression**: Mean accuracy 0.953, F1-score 0.945 (3-fold CV).
-  - **Learning Curves**: Logistic regression consistently outperformed Naïve Bayes, with accuracy increasing with training size (e.g., 0.932 at 1% to 0.956 at 100% for LR).
-  - **Generative Modeling**: Generated samples had similar means but slightly lower variances compared to training data (e.g., variance for `variance` feature: 3.33–3.89 generated vs. 3.54 training).
+- **scikit-learn**: Used only for `KFold` and `confusion_matrix` utilities.
 
 ## Homework 2: ...
 
