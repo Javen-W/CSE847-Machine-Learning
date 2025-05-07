@@ -5,6 +5,8 @@ This repository contains my coursework for CSE847: Machine Learning, a graduate-
 ## Table of Contents
 - [CSE847: Machine Learning Coursework](#cse847-machine-learning-coursework)
   - [Homework 1: Bayesian Inference and Classification](#homework-1-bayesian-inference-and-classification)
+  - [Homework 2: ...]()
+  - [Homework 3: ...]()
   - [Skills Demonstrated](#skills-demonstrated)
 
 
@@ -20,19 +22,19 @@ Homework 1 includes five problems:
 
 ### Problem 1: Bayes Classifier
 - **Task**: Prove that the MLE estimator for variance $\hat{\sigma}^2$ in a Gaussian distribution is biased and derive the MAP estimator for the mean $\hat{\mu}_{MAP}$ given a Gaussian prior.
-- **Solution**: Demonstrated that $\mathbb{E}[\hat{\sigma}^2] = \frac{N-1}{N}\sigma^2$, confirming bias. Derived $\hat{\mu}_{MAP} = \frac{N\sigma^2\theta + \lambda\sum x_i}{N\sigma^2 + \lambda}$ using the posterior distribution.
+- **Solution**: Demonstrated that ...
 
 ### Problem 2: Parameter Estimation
 - **Task**: Find the MLE estimator for the parameter $\lambda$ of a Poisson distribution and compute the expectation $\mathbb{E}[X]$.
-- **Solution**: Derived $\hat{\lambda}_{MLE} = \frac{1}{N}\sum k_i$ by maximizing the log-likelihood. Proved $\mathbb{E}[X] = \lambda$ using the Poisson PMF.
+- **Solution**: Derived ...
 
 ### Problem 3: Naïve Bayes Classifier
 - **Task**: Analyze a dataset of apples with features (size, color, shape) to determine the number of parameters, estimate their MLE values, and predict the class probability for a new apple.
-- **Solution**: Identified 14 independent parameters (class prior and conditional probabilities). Estimated probabilities via MLE (e.g., $P(\text{Size=Small}|\text{Good=Yes})$ ). Predicted $P(\text{Good=No}|\text{Small, Red, Circle}) = 0.66$, leading to a "No" prediction.
+- **Solution**: Identified ...
 
 ### Problem 4: Logistic Regression
 - **Task**: Train a logistic regression classifier on a synthetic dataset with two initial weight vectors and analyze convergence.
-- **Solution**: Implemented gradient ascent with learning rate \(\eta = 0.001\). Showed that different initial weights (\([0, 0, 0, 0]\), \([0, 0, 1, 0]\)) converge to different solutions due to the non-convex nature of the log-likelihood in this dataset. Final weights: \([0, 0.0166, 1.0089, 0.0166]\) and \([0, 0.0166, 0.0166, 0.0166]\).
+- **Solution**: Implemented gradient ascent ...
 
 ### Problem 5: Gaussian Naïve Bayes and Logistic Regression
 - **Task**: Implement Gaussian Naïve Bayes and logistic regression from scratch, evaluate on the banknote authentication dataset, plot learning curves, and analyze generative modeling.
@@ -58,6 +60,10 @@ Homework 1 includes five problems:
   - **Logistic Regression**: Mean accuracy 0.953, F1-score 0.945 (3-fold CV).
   - **Learning Curves**: Logistic regression consistently outperformed Naïve Bayes, with accuracy increasing with training size (e.g., 0.932 at 1% to 0.956 at 100% for LR).
   - **Generative Modeling**: Generated samples had similar means but slightly lower variances compared to training data (e.g., variance for `variance` feature: 3.33–3.89 generated vs. 3.54 training).
+
+## Homework 2: ...
+
+## Homework 3: ...
 
 ## Skills Demonstrated
 - **Machine Learning Theory**: Derived MLE and MAP estimators, proved estimator bias, and analyzed model parameters.
