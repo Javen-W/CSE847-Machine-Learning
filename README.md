@@ -25,26 +25,32 @@ HW1 explores probabilistic machine learning through five problems, combining the
 ### Tasks and Solutions
 1. **Bayes Classifier**:
    - **Task**: Proved the MLE estimator for variance in a Gaussian distribution is biased and derived the MAP estimator for the mean with a Gaussian prior.
-   - **Solution**: Demonstrated bias via expectation calculations (E[σ̂²_MLE] = ((N-1)/N)σ² ≠ σ²) and derived μ̂_MAP = (∑x_i/σ² + θ/λ) / (N/σ² + 1/λ).
+   - **Solution**: Demonstrated bias via expectation calculations and derived the MAP estimator $\hat{\mu}_{MAP}$.
+
+ $$E[\hat{\sigma}^2_{MLE}] = \frac{N-1}{N}σ^2 ≠ σ^2$$
+
+ $$\hat{\mu}_{MAP} = \frac{\lambda \Sigma^N x_i + σ^2 θ}{\lambda N + σ^2}$$
 
 2. **Parameter Estimation**:
-   - **Task**: Computed the MLE estimator for a Poisson distribution’s parameter λ and its expectation.
-   - **Solution**: Derived λ̂_MLE = (1/N)∑k_i (sample mean) and showed E[X] = λ using the Poisson PMF.
+   - **Task**: Computed the MLE estimator for a Poisson distribution’s parameter \lambda and its expectation.
+   - **Solution**: Derived $\hat{\lambda}_{MLE}$ (sample mean) and showed $E[X] = \lambda$ using the Poisson PMF.
+
+$$\hat{\lambda}_{MLE} = \frac{\Sigma^N k_i}{N}$$
 
 3. **Naïve Bayes Classifier**:
    - **Task**: Analyzed a categorical apple dataset to determine parameters, estimate MLE values, and predict class probability for a new apple (Small, Red, Circle).
-   - **Solution**: Identified 7 independent parameters (e.g., P(Y=yes), P(Size=small|Y=yes)). Estimated probabilities (e.g., P(Y=yes)=0.4) and predicted P(Y=no|x)=0.182, classifying as “Yes”.
+   - **Solution**: Identified 7 independent parameters (e.g., $P(Y=yes), P(Size=small|Y=yes)$ ). Estimated probabilities (e.g., $P(Y=yes)=0.4$ and $P(Y=no|x)=0.182$), classifying as “Yes”.
 
 4. **Logistic Regression**:
    - **Task**: Trained a logistic regression classifier on a synthetic dataset with two initial weight vectors, analyzing convergence.
-   - **Solution**: Implemented gradient ascent, achieving final weights [0, 0.0166, 0.0166, 0.0166] (log-likelihood -4.1098) and [0, 0.0166, 1.0089, 0.0166] (-3.3616). Noted convergence differences due to iteration limits.
+   - **Solution**: Implemented gradient ascent, achieving final weights $[0, 0.0166, 0.0166, 0.0166]$ (log-likelihood -4.1098) and $[0, 0.0166, 1.0089, 0.0166]$ (-3.3616). Noted convergence differences due to iteration limits.
 
 5. **Gaussian Naïve Bayes and Logistic Regression**:
    - **Task**: Implemented both classifiers from scratch, evaluated on the banknote dataset using 3-fold cross-validation, plotted learning curves, and analyzed generative modeling.
    - **Solution**:
      - **Implementation**: Built Gaussian Naïve Bayes (assuming conditional independence) and logistic regression (gradient ascent) using NumPy. Evaluated with 3-fold CV.
-     - **Learning Curves**: Plotted accuracy vs. training sizes ([0.01, 0.02, 0.05, 0.1, 0.625, 1.0]) over 5 runs. Logistic regression outperformed Naïve Bayes (e.g., 0.956 vs. 0.841 accuracy at full size).
-     - **Generative Modeling**: Generated 400 samples (class y=1) using Naïve Bayes. Compared mean/variance with training data, noting slight variance discrepancies (e.g., 3.33–3.89 generated vs. 3.54 training) due to Gaussian assumptions.
+     - **Learning Curves**: Plotted accuracy vs. training sizes ($[0.01, 0.02, 0.05, 0.1, 0.625, 1.0]$) over 5 runs. Logistic regression outperformed Naïve Bayes (e.g., 0.956 vs. 0.841 accuracy at full size).
+     - **Generative Modeling**: Generated 400 samples (class y=1) using Naïve Bayes. Compared mean/variance with training data, noting slight variance discrepancies (e.g., 3.33 – 3.89 generated vs. 3.54 training) due to Gaussian assumptions.
 
 ### Tools and Technologies
 - **Python**: Core implementation language.
@@ -56,8 +62,8 @@ HW1 explores probabilistic machine learning through five problems, combining the
 
 ### Results
 - **Logistic Regression (Problem 4)**:
-  - Initial weights [0,0,0,0]: Log-likelihood -4.1098.
-  - Initial weights [0,0,1,0]: Log-likelihood -3.3616.
+  - Initial weights $[0,0,0,0]$: Log-likelihood -4.1098.
+  - Initial weights $[0,0,1,0]$: Log-likelihood -3.3616.
 - **Model Comparison (Problem 5)**:
   - **Gaussian Naïve Bayes**: Accuracy 0.840, F1-score 0.814 (3-fold CV).
   - **Logistic Regression**: Accuracy 0.953, F1-score 0.945 (3-fold CV).
@@ -76,23 +82,23 @@ HW2 investigates Support Vector Machines (SVM), AdaBoost, and K-Nearest Neighbor
 ### Tasks and Solutions
 1. **Support Vector Machines**:
    - **Task**: Compared hard-margin and soft-margin SVMs and categorized samples by slack variables.
-   - **Solution**: Explained that hard-margin SVMs assume linear separability and are sensitive to outliers, while soft-margin SVMs handle noisy data via slack variables (ξ_i). Categorized samples as:
-     - ξ_i = 0: Correct side of margin.
-     - 0 < ξ_i < 1: Correct side of hyperplane, wrong side of margin.
-     - ξ_i ≥ 1: Misclassified.
-     - Noted that removing a support vector (ξ_i = 0, on margin) could shift the decision boundary.
+   - **Solution**: Explained that hard-margin SVMs assume linear separability and are sensitive to outliers, while soft-margin SVMs handle noisy data via slack variables ($ξ_i$). Categorized samples as:
+     - $ξ_i = 0$: Correct side of margin.
+     - $0 < ξ_i < 1$: Correct side of hyperplane, wrong side of margin.
+     - $ξ_i ≥ 1$: Misclassified.
+     - Noted that removing a support vector ($ξ_i = 0$, on margin) could shift the decision boundary.
 
 2. **AdaBoost**:
    - **Task**: Analyzed weak classifier requirements and computed weights for a binary classification dataset over 6 iterations.
    - **Solution**:
      - **Requirements**: Weak classifiers must perform better than random guessing (>50% accuracy for binary classification) and focus on different data subsets. Classifiers with <50% accuracy degrade performance unless predictions are inverted.
-     - **Weight Calculation**: Implemented AdaBoost with a threshold (θ=2.5), computing weights for 10 samples. Weights converged after 4 iterations (e.g., [0.06, ..., 0.1667]), with no improvement from iterations 5–6, indicating optimal classifier combination.
+     - **Weight Calculation**: Implemented AdaBoost with a threshold ($θ=2.5$), computing weights for 10 samples. Weights converged after 4 iterations (e.g., $[0.06, ..., 0.1667]$), with no improvement from iterations 5–6, indicating optimal classifier combination.
 
 3. **K-Nearest Neighbors Classifier**:
    - **Task**: Analyzed online learning requirements and implemented a KNN classifier for MNIST digit classification, evaluating error rates for varying k.
    - **Solution**:
      - **Online Learning**: Noted that SVM requires retraining for new samples (due to margin optimization), while Naïve Bayes and KNN update incrementally. KNN has the highest inference complexity (O(n·d) for n samples, d features) due to distance calculations.
-     - **Implementation**: Built KNN from scratch with Euclidean distance, using subroutines for distance calculation, neighbor selection, and majority voting. Evaluated with k=[1, 9, 19, ..., 99] over 5 runs.
+     - **Implementation**: Built KNN from scratch with Euclidean distance, using subroutines for distance calculation, neighbor selection, and majority voting. Evaluated with $k=[1, 9, 19, ..., 99]$ over 5 runs.
      - **Error Curves**: Plotted training and test error rates vs. k. Achieved lowest test error (0.740) at k=1, with errors converging to ~0.848 at k=99. Training error was 0.0 at k=1, as expected.
 
 ### Tools and Technologies
@@ -103,7 +109,7 @@ HW2 investigates Support Vector Machines (SVM), AdaBoost, and K-Nearest Neighbor
 - **Keras**: MNIST dataset loading.
 
 ### Results
-- **AdaBoost**: Weights stabilized after 4 iterations (e.g., [0.06, ..., 0.1667]), confirming no benefit from additional classifiers.
+- **AdaBoost**: Weights stabilized after 4 iterations (e.g., $[0.06, ..., 0.1667]$), confirming no benefit from additional classifiers.
 - **KNN**:
   - Test error: 0.740 at k=1, increasing to 0.848 at k=99.
   - Training error: 0.0 at k=1, rising to 0.848 at k=99.
@@ -118,7 +124,7 @@ HW3 focuses on unsupervised learning and probabilistic modeling through Gaussian
 
 ### Tasks and Solutions
 1. **Gaussian Mixture Model and EM Algorithm**:
-   - **Task**: Determined the number of independent parameters in a GMM with k=2 and computed parameters after one EM iteration for a 1D dataset {-67, -48, 6, 8, 14, 16, 23, 24}.
+   - **Task**: Determined the number of independent parameters in a GMM with k=2 and computed parameters after one EM iteration for a 1D dataset ${-67, -48, 6, 8, 14, 16, 23, 24}$.
    - **Solution**:
      - **Parameters**: Calculated 5 independent parameters (3k-1 for k=2: 2 means, 2 variances, 1 weight constrained by sum-to-1).
      - **EM Implementation**: Implemented E-step (responsibilities via Gaussian PDF) and M-step (updated means, variances, weights). After one iteration with initial means [-67, 24], variances [100, 100], weights [0.5, 0.5], obtained:
@@ -128,10 +134,12 @@ HW3 focuses on unsupervised learning and probabilistic modeling through Gaussian
 
 2. **Graphical Models**:
    - **Task**: Derived the joint distribution for a given graphical model with variables Y, X1–X6.
-   - **Solution**: Factored the joint distribution as P(Y,X1,X2,X3,X4,X5,X6) = P(Y|X2,X5)·P(X1)·P(X2)·P(X3|X2,X6)·P(X4|X3)·P(X5|X1,X6)·P(X6), reflecting the model’s conditional dependencies.
+   - **Solution**: Factored the joint distribution, reflecting the model’s conditional dependencies.
+
+$$P(Y,X1,X2,X3,X4,X5,X6) = P(Y|X2,X5)·P(X1)·P(X2)·P(X3|X2,X6)·P(X4|X3)·P(X5|X1,X6)·P(X6)$$
 
 3. **K-Means Clustering**:
-   - **Task**: Applied K-Means to a 2D dataset {(3,3), (7,9), (9,7), (5,3)} with initial centroids (6,5), (6,6), and implemented K-Means on the breast cancer dataset for k=2–8.
+   - **Task**: Applied K-Means to a 2D dataset ${(3,3), (7,9), (9,7), (5,3)}$ with initial centroids (6,5), (6,6), and implemented K-Means on the breast cancer dataset for k=2–8.
    - **Solution**:
      - **Small Dataset**: Tracked cluster memberships and centroids over iterations, converging with a loss of 6.0 (Euclidean distance sum). Noted ambiguity about squaring distances (loss 10.0 if squared).
      - **Implementation**: Built K-Means from scratch with a `Cluster` class for centroid updates, handling empty clusters by splitting the largest cluster. Used Euclidean distance and ran for k=2–8.
