@@ -64,6 +64,10 @@ HW1 explores probabilistic machine learning through five problems, combining the
   - **Learning Curves**: Logistic regression showed higher accuracy across all training sizes (e.g., 0.932 at 1% to 0.956 at 100%).
   - **Generative Modeling**: Generated samples closely matched training means but had lower variances, highlighting Gaussian assumption limitations.
 
+![q5p3](https://github.com/user-attachments/assets/68269344-8231-4a04-be00-16269d2d1a96)
+
+![model-accuracy](https://github.com/user-attachments/assets/b8ccef91-5057-4a3b-b789-d99d1b6da605)
+
 ## Homework 2: SVM, AdaBoost, and KNN
 
 ### Overview
@@ -104,6 +108,8 @@ HW2 investigates Support Vector Machines (SVM), AdaBoost, and K-Nearest Neighbor
   - Test error: 0.740 at k=1, increasing to 0.848 at k=99.
   - Training error: 0.0 at k=1, rising to 0.848 at k=99.
   - Error curves showed optimal performance at low k, with high errors at large k due to over-smoothing.
+
+![knn_errors](https://github.com/user-attachments/assets/794213ff-114a-4701-bd13-5b7ed02dc2a1)
 
 ## Homework 3: GMM, Graphical Models, and K-Means
 
@@ -146,6 +152,10 @@ HW3 focuses on unsupervised learning and probabilistic modeling through Gaussian
   - Final centroids: [(4,3), (8,8)].
 - **K-Means (Breast Cancer)**:
   - Loss decreased with increasing k, with k=6 identified as optimal due to diminishing returns (visualized in loss curve).
+
+![Q3 2](https://github.com/user-attachments/assets/6ce18368-eda1-4870-9cf8-59c74eb65f88)
+
+![Q3-3](https://github.com/user-attachments/assets/845a383f-8e77-4cb6-ada1-96a75886abd3)
 
 ## Skills Demonstrated
 - **Machine Learning Theory**: Derived MLE/MAP estimators, SVM slack variables, GMM parameters, and graphical model distributions, showcasing deep understanding of probabilistic and clustering models.
